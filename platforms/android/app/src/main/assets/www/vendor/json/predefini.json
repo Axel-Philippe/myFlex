@@ -1,0 +1,13 @@
+{
+    "horaires":[
+        {
+            "heureArrivee":"8",
+            "minuteArrivee":"00",
+            "heureDebut":"8",
+            "minuteDebut":"00",
+            "heureFin":"8",
+            "minuteFin":"00",
+            "flex":"0.0"
+        }
+    ]
+}

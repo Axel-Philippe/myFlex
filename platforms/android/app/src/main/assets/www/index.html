@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="container">
+            <div clas="row">
+                <h1>Bienvenue sur myFlex</h1>
+                <p>Avec myFlex, vous pouvez calculer votre horaire de départ avec et sans flex. Tout ce que vous avez à faire, c'est entrer vos données issues de myHR !</p>
+                <!--
+                    <label class="switch">
+                    <input id="sauvegarde" type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+
+                  <button id="inserePrefedini" class="btn btn-danger">Insérer les horaires prédéfinis</button>
+                -->
+            </div>
+            <div id="formulaireDiv" class="row">
+                <div id="formulaire" class="was-validated">
+                    <div class="form-group">
+                        <h2>Horaire d'arrivée</h2>
+                        <div class="input-group">
+                            <input type="number" id="heureArrivee" min="0" max ="23"  required class="form-control">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">:</span>
+                            </div>
+                            <input type="number" id="minuteArrivee" min="0" max ="59" required class="form-control">
+                            <div class="invalid-feedback">Entrez une horaire de la forme "8:05" ou encore "12:45</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h2>Début du repas</h2>
+                        <div class="input-group">
+                            <input type="number" id="heureDebut" min="0" max ="23" required class="form-control">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">:</span>
+                            </div>
+                            <input type="number" id="minuteDebut" min="0" max ="59" required class="form-control">
+                            <div class="invalid-feedback">Entrez une horaire de la forme "8:05" ou encore "12:45</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h2>Fin du repas</h2>
+                        <div class="input-group">
+                            <input type="number" id="heureFin" min="0" max ="23" required class="form-control">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">:</span>
+                            </div>
+                            <input type="number" id="minuteFin" min="0" max ="59" required class="form-control" >
+                            <div class="invalid-feedback">Entrez une horaire de la forme "8:05" ou encore "12:45</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h2>Flex</h2>
+                        <div class="input-group">
+                            <input type="text" id="flex" pattern="-*[0-9]{1,2}\.[0-9]{1,2}" class="form-control" >
+                            <div class="invalid-feedback">Entrez votre flex de la forme "-0.5", "0.5" ou encore "1.0"</div>
+                        </div>
+                    </div>
+                    <div class="form-group col md-2">
+                        <div class="input-group">
+                            <button class="btn btn-success" id="calcul">Calculer mon Flex</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="affichage">
+
+            </div>
+        </div>
+
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="vendor/jquery/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>  
+    </body>
+</html>
