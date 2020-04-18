@@ -18,22 +18,24 @@
  */
 
 body{
-  background-color: #517CA4;
+  overflow-y: hidden; 
+  background-color: rgb(148, 137, 160);
 }
 
 h1, p{
-  text-align: center;
-  color: white
+  color: white;
+
 }
 
 #formulaire{
   background-color: white;
   border-radius: 10px;
   padding: 10px;
-  text-align: center;
+  color: rgb(148, 137, 160);
+
 }
 
-#formulaireDiv {
+#calcul{
   text-align: center;
 }
 

@@ -28,11 +28,6 @@ var app = {
     },
 
     onDeviceReady: function() {
-        startNodeProject();
-
-
-        $("#inserePrefedini").on("click", inserePredefinie)
-        $("#sauvegarde").on("click", insereHoraireSauvee);
         $("#calcul").on("click", calculerHoraires);
     },
 
@@ -78,11 +73,6 @@ function controleHoraire(horaireA, horaireD, horaireF){
         return true;
     }
 }
-
-/**
- * A implémenter plus tard.
- * Enregistrer l'état du swtich puis faire le traitement, même après fermeture de l'application
- */
 /*
 function remplirHoraire(){
 
